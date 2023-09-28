@@ -1,41 +1,42 @@
 #include<iostream>
-
 using namespace std;
+
 class employee
 {
-	private:
-		int emp_id;
-		string emp_name;
-	public:
-		void getdata()
-		{
-			cout<<"enter the name of employee:";
-			cin>>emp_name;
-			cout<<"Enter the id of employee:";
-			cin>>emp_id;
-		}
-		
-		void putdata()
-		{
-			cout<<"The name of employee is:"<<emp_name<<endl;
-			cout<<"The id of employee is:"<<emp_id<<endl;
-		}
+    int emp_id;
+    string emp_name;
+    public:
+        void getdata()
+        {
+            cout<<"Enter the employee's id:";
+            cin>>emp_id;
+            cout<<"Enter the employee's name:";
+            cin>>emp_name;  
+        }
+        void putdata()
+        {
+            cout<<emp_id<<":"<<emp_name<<endl;
+        }
 };
+
 int main()
 {
-	cout<<"Purohit Akruti K."<<endl;
-	cout<<"220130318033"<<endl;
-	
-	employee e[10];
-	
-	for(int i=0;i<10;i++)
-	{
-		e[i].getdata();
-	}
-	
-	for(int i=0;i<10;i++)
-	{
-		e[i].putdata();
-	}
-	return 0;
+    cout<<"Purohit Akruti K."<<endl;
+    cout<<"220130318033"<<endl;
+    
+    employee e[10];
+    
+    cout<<"Enter details of 10 employees:"<<endl;
+    for(int i = 0;i<10;i++)
+    {
+        e[i].getdata();
+    }
+    
+    cout<<"Details of 10 employees:"<<endl;
+    for(int i = 0;i<10;i++)
+    {
+        e[i].putdata();
+    }
+    
+    return 0;
 }
