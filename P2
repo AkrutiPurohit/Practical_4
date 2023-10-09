@@ -1,0 +1,33 @@
+//Write a c++ program to demonstrate use of static member function.
+
+#include<iostream>
+
+using namespace std;
+
+class example
+{
+    static int a;
+    
+    public:
+        int increment()
+        {
+            a=a+3;
+            return a;
+        }
+        void display()
+        {
+            cout<<"The value of a is:"<<a<<endl;
+        }
+};
+
+int example :: a = 1;
+int main()
+{
+    cout<<"Purohit Akruti K."<<endl;
+    cout<<"220130318033"<<endl;
+    example e;
+    e.display();
+    e.increment();
+    e.display();
+    return 0;
+}
