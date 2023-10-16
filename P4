@@ -1,0 +1,39 @@
+// Write a C++ program to demonstrate use of passing object as an argument.
+
+#include<iostream>
+using namespace std;
+
+class student
+{
+	public:
+		int age;
+		string name;
+		long long int er_no;
+		void get()
+		{
+			cout<<"Enter your name:";
+			cin>>name;
+			cout<<"Enter your age:";
+			cin>>age;
+			cout<<"Enter your enrollment number:";
+			cin>>er_no;
+		}	
+};
+
+void print(student &s)
+{
+	s.get();
+	cout<<"Your name is:"<<s.name<<endl;
+	cout<<"Your age is:"<<s.age<<endl;
+	cout<<"Your enrollment number is:"<<s.er_no<<endl;
+}
+
+int main()
+{
+	cout<<"Purohit Akruti K."<<endl;
+	cout<<"220130318033"<<endl;
+	
+	student s1;
+	print(s1);
+	return 0;
+}
