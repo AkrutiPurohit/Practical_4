@@ -1,0 +1,38 @@
+//Write a C++ program to calculate difference between Manufacture year and expiry year using pass object as function argument. 
+
+#include<iostream.h>
+using namespace std;
+
+class year
+{
+	public:
+		string pname;
+		int myear;
+		int eyear;
+		
+		void get()
+		{
+			cout<<"Enter the product name:";
+			cin>>pname;
+			
+			cout<<"Enter the manufacturing year:";
+			cin>>myear;
+			
+			cout<<"Enter the expiry year:";
+			cin>>eyear;
+		}
+};
+int diff(year &y)
+{
+	return (y.eyear - y.myear);
+}
+
+int main()
+{
+	
+	year y1;
+	y1.get();
+	int ans = diff(y1);
+	cout<<"You can use "<<y1.pname<<" for "<<ans<<" years."<<endl;
+	return 0;
+}
