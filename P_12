@@ -1,0 +1,29 @@
+//Write a C++ program to demonstrate use of copy constructor.
+
+#include<iostream>
+using namespace std;
+
+class demo
+{
+    public:
+        demo(string n)
+        {
+            cout<<n <<" this perameterized constructor of class demo."<<endl;
+        }
+        demo(demo &d)
+        {
+            cout<<"This is a copy constructor."<<endl;
+        }
+};
+
+int main()
+{
+    cout<<"Purohit Akruti K."<<endl;
+    cout<<"220130318033"<<endl;
+    
+    string name = "Akruti";
+    demo d1(name);
+    demo d2(d1);
+    
+    return 0;
+}
