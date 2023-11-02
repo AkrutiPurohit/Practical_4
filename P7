@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+class example
+{
+    private:
+        string name;
+        int age;
+    public:
+        void getdata()
+        {
+            cout << "Enter your name: ";
+            cin >> name;
+            cout << "Enter your age: ";
+            cin >> age;
+        }
+        friend void print(example e); 
+};
+
+void print(example e)
+{
+    cout << "Your name is: " << e.name << endl;
+    cout << "Your age is: " << e.age << endl;
+}
+
+int main()
+{
+    cout << "Purohit Akruti K." << endl;
+    cout << "220130318033" << endl;
+    
+    example e;
+    
+    e.getdata();
+    print(e); 
+    
+    return 0;
+}
