@@ -1,0 +1,36 @@
+//Write a C++ program to calculate addition of two numbers using Friend function.
+
+#include<iostream>
+using namespace std;
+
+class number
+{
+    private:
+        int a,b;
+    public:
+        void getdata()
+        {
+            cout<<"Enter number 1:";
+            cin>>a;
+            cout<<"Enter number 2:";
+            cin>>b;
+        }
+        friend void sum(number n); 
+};
+
+void sum(number n)
+{
+    cout<<"The sum of both numbers is:"<<n.a + n.b<<endl;
+}
+
+int main()
+{
+    cout << "Purohit Akruti K." << endl;
+    cout << "220130318033" << endl;
+    
+    number n1;
+    n1.getdata();
+    sum(n1);
+    
+    return 0;
+}
