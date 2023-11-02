@@ -1,0 +1,30 @@
+//Write a C++ program to print message when object gets destroyed using destructor.
+
+//Write a C++ program to demonstrate use of Parameterized Constructor.
+
+#include<iostream>
+using namespace std;
+
+class demo
+{
+    public:
+        demo(string n)
+        {
+            cout<<n <<" this perameterized constructor of class demo."<<endl;
+        }
+        ~demo()
+        {
+            cout<<"The destructor will destroy every object of this class at the time of program termination"<<endl;
+        }
+};
+
+int main()
+{
+    cout<<"Purohit Akruti K."<<endl;
+    cout<<"220130318033"<<endl;
+    
+    string name = "Akruti";
+    demo d(name);
+    
+    return 0;
+}
