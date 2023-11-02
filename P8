@@ -1,0 +1,65 @@
+#include<iostream>
+
+using namespace std;
+
+class rectangle;
+
+class calculate
+{
+public:
+    float perimeter(rectangle r1); // Declare the function to calculate the perimeter
+
+    float area(rectangle r1); // Declare the function to calculate the area
+
+    void print(rectangle r1);
+};
+
+class rectangle
+{
+private:
+
+public:
+    float l, w;
+    void getdata()
+    {
+        cout << "Enter the length of rectangle: ";
+        cin >> l;
+        cout << "Enter the width of rectangle: ";
+        cin >> w;
+    }
+
+    friend float calculate::perimeter(rectangle r1); // Declare calculate class as a friend to access private members
+    friend float calculate::area(rectangle r1);
+};
+
+float calculate::perimeter(rectangle r1)
+{
+    return 2 * (r1.l + r1.w);
+}
+
+float calculate::area(rectangle r1)
+{
+    return r1.l * r1.w;
+}
+
+void calculate::print(rectangle r1)
+{
+    cout << "The length of rectangle is: " << r1.l << endl;
+    cout << "The width of rectangle is: " << r1.w << endl;
+    cout << "The perimeter of rectangle is: " << perimeter(r1) << endl;
+    cout << "The area of rectangle is: " << area(r1) << endl;
+}
+
+int main()
+{
+    cout << "Purohit Akruti K." << endl;
+    cout << "220130318033" << endl;
+
+    rectangle r;
+    r.getdata();
+
+    calculate c;
+    c.print(r);
+
+    return 0;
+}
